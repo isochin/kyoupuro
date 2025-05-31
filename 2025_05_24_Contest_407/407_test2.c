@@ -22,7 +22,7 @@ int main(void)
 		}
 	}
 	
-	printf("%.10f\n", count / 36.0);
+	printf("%.16f\n", count / 36);
 	
 	return 0;
 }
