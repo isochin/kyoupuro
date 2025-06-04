@@ -30,9 +30,9 @@ int main(void)
     printf("%d\n", count);
     printf("%d ", num[0]);
 
-    for(int m = 0; m < N - 1; m++){
-        if(num[m] != num[m+1]){
-            printf("%d ", num[m+1]);
+    for(int s = 0; s < N - 1; s++){
+        if(num[s] != num[s+1]){
+            printf("%d ", num[s+1]);
         }
     }
 
