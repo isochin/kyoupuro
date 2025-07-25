@@ -6,21 +6,22 @@ int main(void)
 	scanf("%d", &n);
 	scanf("%d", &q);
 	
-	int a[n];
-	for(int i = 0; i < n; i++){
+	int a[n + 1];
+	for(int i = 1; i <= n; i++){
 		scanf("%d", &a[i]);
 	}
 	
-	int ans[q];
-	int l[q], r[q];
-	for(int i = 0; i < q; i++){
-		scanf("%d", &l[i]);
-		scanf("%d", &r[i]);
-		ans[i] = a[l[i]] + a[r[i]];
+	int s[n + 1];
+	s[0] = 0;
+	for(int j = 1; j <= n; j++){
+		s[j] = s[j - 1] + a[j];
 	}
 	
-	for(int j = 0; j < q; j++){
-		printf("%d\n", ans[j]);
+	for(int i = 0; i < q; i++){
+		int l, r;
+		scanf("%d", &l);
+		scanf("%d", &r);
+		printf("%d\n", s[r] - s[l - 1]);
 	}
 	
 	return 0;
